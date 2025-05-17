@@ -1,0 +1,41 @@
+@import url(https://font.download/font/museo-slab);
+:root{
+    /* Body */
+    --font-primary: 'Museo Slab, sans-serif';
+    /* Other uses */
+    --font-secondary: serif;
+    /* Base values*/
+    --text-base-size: 1rem;
+}
+
+@media (min-width: 60em) {
+    :root {
+        --text-base-size: 1.125rem;
+    }
+}
+
+@media (min-width: 80em) {
+    :root {
+        --text-base-size: 1.25rem;
+    }
+}
+
+@media (min-width: 100em) {
+    :root {
+        --text-base-size: 1.375rem;
+    }
+}
+
+body, html {
+    font-family: var(--font-primary);
+    font-size: var(--text-base-size);
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+}

@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('../assets/website-header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+}
+
+.header--content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-1.5em);
+}
+
+.header--middle > a {
+    display: inline-block;
+    margin: 3em;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    transform: translateX(-2em);
+  }
+
+.header--right > svg {
+    margin: 0.5em;
+}
