@@ -1,30 +1,54 @@
-@import url(https://font.download/font/museo-slab);
+@font-face {
+  font-family: 'Museo Slab';
+  src: url('../assets/fonts/museo-slab/Museo_Slab_500.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Slab';
+  src: url('../assets/fonts/museo-slab/Museo_Slab_700.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Slab';
+  src: url('../assets/fonts/museo-slab/Museo_Slab_900.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Slab';
+  src: url('../assets/fonts/museo-slab/Museo_Slab_1000.otf') format('opentype');
+  font-weight: 1000;
+  font-style: normal; /* or bold if the file is visually heavier */;
+}
+
 :root{
+    font-size: 16px;
     /* Body */
-    --font-primary: 'Museo Slab, sans-serif';
+    --font-primary: 'Museo Slab', serif;
     /* Other uses */
     --font-secondary: serif;
     /* Base values*/
-    --text-base-size: 1rem;
+    --text-base-size: 1.25rem;
+
+    /* Weight-based sizes */
+    --font-size-500: 1.25rem;     /* Regular */
+    --font-size-700: 1.5rem;  /* Bold */
+    --font-size-900: 2rem;   /* Extra Bold */
+    --font-size-1000: 3rem; /* Black */
 }
+
 
 @media (min-width: 60em) {
     :root {
-        --text-base-size: 1.125rem;
+        font-size: 20px;
     }
 }
 
-@media (min-width: 80em) {
-    :root {
-        --text-base-size: 1.25rem;
-    }
-}
-
-@media (min-width: 100em) {
-    :root {
-        --text-base-size: 1.375rem;
-    }
-}
 
 body, html {
     font-family: var(--font-primary);
@@ -38,4 +62,35 @@ a {
     text-decoration: none;
     color: var(--color-text);
     font-family: var(--font-primary);
+}
+
+h1 {
+    font-weight: 1000;
+    font-size: var(--font-size-1000);
+}
+
+h2 {
+    font-weight: 900;
+    font-size: var(--font-size-900);
+}
+
+h3 {
+    font-weight: 700;
+    font-size: var(--font-size-700);
+}
+
+p {
+    font-weight: 500;
+    font-size: var(--font-size-500);
+}
+
+footer p, footer a {
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+footer h3 {
+    color: var(--color-text-light);
+    font-size: 1.5rem;
 }
