@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - LilBeans</title>
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/typography.css">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/add-to-cart.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header--content">
+            <div class="header--left">
+                <a href="../index.html"><img src="../assets/images/lilbeans-main-logo.svg" alt="lilbeans main logo"
+                        class="main-logo" width="182" height="108"></a>
+            </div>
+
+            <div class="header--middle">
+                <a href="../index.html">Home</a>
+                <a href="./all.html">Shop All</a>
+            </div>
+
+            <div class="header--right">
+                <!--Search icon-->
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="search-icon">
+                    <path
+                        d="M14.0537 0.5C17.7305 0.5 20.8459 1.72933 23.4268 4.19336L23.6748 4.43555C26.3031 7.06102 27.6126 10.2572 27.6084 14.0537L27.5967 14.624C27.5511 15.7554 27.3687 16.8343 27.0508 17.8623L26.8809 18.3721C26.3936 19.7294 25.7349 20.9234 24.9072 21.958L24.627 22.3076L24.9434 22.624L37.0518 34.7314C37.3452 35.0249 37.4999 35.3982 37.5 35.8916C37.5 36.3852 37.3452 36.7583 37.0518 37.0518C36.7583 37.3452 36.3852 37.5 35.8916 37.5C35.4598 37.4999 35.1204 37.3815 34.8457 37.1553L34.7324 37.0518H34.7314L22.624 24.9434L22.3076 24.627L21.958 24.9072C21.0526 25.6315 20.0252 26.2266 18.873 26.6904L18.3721 26.8809C17.0241 27.3647 15.5853 27.6084 14.0537 27.6084C10.3743 27.6083 7.26018 26.3786 4.68359 23.915L4.43555 23.6729C1.81134 21.0473 0.501394 17.8507 0.5 14.0537L0.503906 13.6992C0.579549 10.1751 1.80781 7.17839 4.19336 4.68359L4.43555 4.43555C7.06254 1.80999 10.2585 0.500079 14.0537 0.5ZM14.0547 3.82422C11.3952 3.82138 9.09754 4.69836 7.18652 6.44824L6.80859 6.81055C4.82646 8.80039 3.82875 11.2247 3.82422 14.0537C3.82007 16.707 4.69769 19.0042 6.44824 20.9219L6.80957 21.3008C8.80076 23.292 11.2252 24.2889 14.0537 24.2832C16.8874 24.2832 19.3133 23.2867 21.3008 21.3008C23.2883 19.3147 24.2857 16.889 24.2842 14.0537L24.2715 13.5273C24.1614 11.0916 23.2899 8.97124 21.6611 7.18652L21.3008 6.80957C19.3161 4.82493 16.8908 3.82726 14.0547 3.82422Z"
+                        fill="currentColor" stroke="currentColor" />
+                </svg>
+
+                <a href="/cart/cart.html">
+                    <!-- Empty cart icon -->
+                    <svg width="46" height="41" viewBox="0 0 46 41" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="shopping-cart-icon cart-empty">
+                        <path
+                            d="M3.61724 6.93333H38.2716C41.4104 6.93333 43.6769 9.54389 42.8158 12.1709L39.0484 23.682C38.4675 25.4498 36.6134 26.6667 34.5042 26.6667H13.6441C11.5326 26.6667 9.67618 25.4477 9.09762 23.682L3.61724 6.93333ZM3.61724 6.93333L2 2M32.7503 39C33.6564 39 34.5255 38.6751 35.1662 38.0969C35.807 37.5187 36.167 36.7344 36.167 35.9167C36.167 35.0989 35.807 34.3147 35.1662 33.7364C34.5255 33.1582 33.6564 32.8333 32.7503 32.8333C31.8441 32.8333 30.975 33.1582 30.3343 33.7364C29.6935 34.3147 29.3336 35.0989 29.3336 35.9167C29.3336 36.7344 29.6935 37.5187 30.3343 38.0969C30.975 38.6751 31.8441 39 32.7503 39ZM14.5279 39C15.434 39 16.3031 38.6751 16.9439 38.0969C17.5846 37.5187 17.9446 36.7344 17.9446 35.9167C17.9446 35.0989 17.5846 34.3147 16.9439 33.7364C16.3031 33.1582 15.434 32.8333 14.5279 32.8333C13.6217 32.8333 12.7527 33.1582 12.1119 33.7364C11.4712 34.3147 11.1112 35.0989 11.1112 35.9167C11.1112 36.7344 11.4712 37.5187 12.1119 38.0969C12.7527 38.6751 13.6217 39 14.5279 39Z"
+                            stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <!-- Full cart icon (hidden by default) -->
+                    <svg width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="shopping-cart-icon cart-full">
+                        <path
+                            d="M3.61724 10.9333H38.2716C41.4104 10.9333 43.6769 13.5439 42.8158 16.1709L39.0484 27.682C38.4675 29.4498 36.6134 30.6667 34.5042 30.6667H13.6441C11.5326 30.6667 9.67618 29.4477 9.09762 27.682L3.61724 10.9333ZM3.61724 10.9333L2 6M32.7503 43C33.6564 43 34.5255 42.6751 35.1662 42.0969C35.807 41.5187 36.167 40.7344 36.167 39.9167C36.167 39.0989 35.807 38.3147 35.1662 37.7364C34.5255 37.1582 33.6564 36.8333 32.7503 36.8333C31.8441 36.8333 30.975 37.1582 30.3343 37.7364C29.6935 38.3147 29.3336 39.0989 29.3336 39.9167C29.3336 40.7344 29.6935 41.5187 30.3343 42.0969C30.975 42.6751 31.8441 43 32.7503 43ZM14.5279 43C15.434 43 16.3031 42.6751 16.9439 42.0969C17.5846 41.5187 17.9446 40.7344 17.9446 39.9167C17.9446 39.0989 17.5846 38.3147 16.9439 37.7364C16.3031 37.1582 15.434 36.8333 14.5279 36.8333C13.6217 36.8333 12.7527 37.1582 12.1119 37.7364C11.4712 38.3147 11.1112 39.0989 11.1112 39.9167C11.1112 40.7344 11.4712 41.5187 12.1119 42.0969C12.7527 42.6751 13.6217 43 14.5279 43Z"
+                            stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="40" cy="12" r="12" fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="products">
+        <h1>All Products</h1>
+        <div class="products--grid">
+            <div class="product--card">
+                <a href="./ludbud.html"><img src="../assets/images/ludwig-real.webp" alt="Ludbud (Ludwig) Plush"
+                        class="product-img">
+                    <h3 class="product-name">Ludbud Plush</h3>
+                </a>
+
+                <p class="product-price">$52.00</p>
+            </div>
+
+            <div class="product--card">
+                <a href="./toast.html"><img src="../assets/images/toast-real.webp" alt="Toast Plush"
+                        class="product-img">
+                    <h3 class="product-name">Toast Plush</h3>
+                </a>
+
+                <p class="product-price">$52.00</p>
+            </div>
+
+            <div class="product--card">
+                <a href="./sprout.html"><img src="../assets/images/sprout-real.webp" alt="Sprout (Sykkuno) Plush"
+                        class="product-img">
+                    <h3 class="product-name">Sprout Plush</h3>
+                </a>
+
+                <p class="product-price">$52.00</p>
+            </div>
+
+            <div class="product--card">
+                <a href="./mr.html"><img src="../assets/images/mr-real.webp" alt="Michael Reeves Plush"
+                        class="product-img">
+                    <h3 class="product-name">Michael Reeves Plush</h3>
+                </a>
+
+                <p class="product-price">$52.00</p>
+            </div>
+
+            <div class="product--card">
+                <a href="./lily.html"><img src="../assets/images/lily-real.webp" alt="LilyPad (Lily Pichu) Plush"
+                        class="product-img">
+                    <h3 class="product-name">LilyPad Plush</h3>
+                </a>
+
+                <p class="product-price">$52.00</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer--content">
+            <div class="footer--brand">
+                <a href="../index.html"><img src="../assets/images/lilbeans-main-logo.svg" alt="lilbeans main logo"
+                        class="main-logo" width="182" height="108"></a>
+                <div class="footer--icons">
+                    <a href="https://www.instagram.com/lilypichu/" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/images/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/lilypichu/" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/images/twitter-icon.svg" alt="Twitter">
+                    </a>
+                    <a href="https://www.patreon.com/sweetnsour" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/images/patreon-icon.svg" alt="Patreon">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCvWU1K29wCZ8j1NsXsRrKnA" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/assets/images/youtube-icon.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer--support">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="/support/contact.html">Contact Us</a></li>
+                    <li><a href="/support/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/support/tos.html">Terms of Service</a></li>
+                    <li><a href="/support/refund.html">Refund Policy</a></li>
+                    <li><a href="/support/shipping.html">Shipping Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer--newsletter">
+                <h3>Join Lil Beans</h3>
+                <p>Be the first to know about new drops, restocked items, and special deals.</p>
+
+                <form action="" class="footer--form">
+                    <input type="email" placeholder="your@email.address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

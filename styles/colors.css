@@ -1,12 +1,74 @@
 :root {
     --color-primary: #F6C6C5;
     --color-primary-dark: #DD9997;
+    --color-primary-light: #FDD5D4;
 
     --color-secondary: #702929;
+    --color-secondary-hover: #843838;
+    --color-secondary-active: #FDD5D4;
     --color-background: #FFFFFF;
-    
+
     --color-text: #702929;
     --color-text-light: #CE7B7B;
     --color-text-white: #FFFFFF;
+    --color-text-hover: #a86c6c;
     --color-text-light-hover: #E6B2B2;
+
+    --color-form: #8F7777;
+    --color-form-active: #CE7B7B;
+    --color-form-hover: #DD9997;
+}
+
+.header--middle a:hover,
+.header--right svg:hover,
+.cart-remove:hover,
+.qty-btn:hover,
+.product--card>a>h3:hover,
+.related-product-card>a>h3:hover {
+    color: var(--color-text-light);
+    transition: color 0.2s;
+}
+
+.footer--support li a:hover {
+    color: var(--color-text-hover);
+    transition: color 0.2s;
+}
+
+.footer--form button:hover {
+    background: var(--color-text-hover);
+    transition: color 0.2s;
+}
+
+.main--button a:hover {
+    background: var(--color-secondary-hover);
+    transition: color 0.2s;
+}
+
+.thumb:hover {
+    border-color: var(--color-primary);
+    transition: border 0.2s;
+}
+
+.thumb.active {
+    border-color: var(--color-primary-dark);
+    transition: color 0.2s;
+}
+
+.add-to-cart:hover,
+.checkout-btn:hover {
+    background: var(--color-secondary-hover);
+    transition: color 0.2s;
+}
+
+.add-to-cart:active,
+.checkout-btn:active {
+    background-color: var(--color-secondary-active);
+    color: var(--color-text);
+    transition: color 0.2s;
+}
+
+.apply-discount-btn:hover,
+.pay-btn:hover,
+.send-btn:hover {
+    background: var(--color-form-hover);
 }
