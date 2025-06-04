@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const summaryItems = document.querySelector('.summary-items');
-    const summaryShipping = document.querySelector('.summary-shipping');
-    const summaryTotal = document.querySelector('.summary-total');
+    const summaryItemsList = document.querySelectorAll('.summary-items');
+    const summaryShippingList = document.querySelectorAll('.summary-shipping');
+    const summaryTotalList = document.querySelectorAll('.summary-total');
     const countrySelect = document.querySelector('select[name="country"]');
 
     function getShipping(country) {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let shipping = getShipping(country);
 
         // Render items
-        summaryItems.innerHTML = cart.map(item => `
+        const itemsHTML = cart.map(item => `
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}" width="48" height="48">
                 <div class="cart-item-details">
@@ -55,16 +55,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
         }
-        summaryShipping.innerHTML = subtotalRow + shippingRow;
+        const shippingHTML = subtotalRow + shippingRow;
 
         // Show total
         let total = (!country || country === 'placeholder') ? subtotal : subtotal + shipping;
-        summaryTotal.innerHTML = `
+        const totalHTML = `
             <div class="summary-row total">
                 <p>Total</p>
                 <p>$${total.toFixed(2)}</p>
             </div>
         `;
+
+        // Update all summary sections
+        summaryItemsList.forEach(el => el.innerHTML = itemsHTML);
+        summaryShippingList.forEach(el => el.innerHTML = shippingHTML);
+        summaryTotalList.forEach(el => el.innerHTML = totalHTML);
     }
 
     // Initial render

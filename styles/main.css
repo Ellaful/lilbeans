@@ -2,6 +2,11 @@ body,
 html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.mobile-only {
+    display: none;
 }
 
 /* ------------------- Home Page ------------------- */
@@ -9,11 +14,12 @@ html {
 /* ------------------- Header ------------------- */
 
 header {
-    background-image: url('../assets/images/website-header.png');
+    background-image: url('../assets/images/website-header.svg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
-    height: 35vh;
+    height: 40vh;
+    margin-top: -0.5em;
 
     display: flex;
     align-items: center;
@@ -26,7 +32,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: translateY(-1.5em);
+    transform: translateY(-2em);
+
 }
 
 .header--middle>a {
@@ -53,11 +60,10 @@ header {
     display: inline;
 }
 
-/* ------------------- Main ------------------- */
+/* ------------------- Home Page Main ------------------- */
 
 main {
     margin: 0 auto;
-    padding: 0 5vh;
 }
 
 .main--content {
@@ -95,7 +101,7 @@ main {
     cursor: pointer;
 }
 
-/* ------------------- Section ------------------- */
+/* ------------------- Home Page Section ------------------- */
 .section--title {
     text-align: center;
 }
@@ -111,12 +117,9 @@ main {
 .section--icons>a {
     display: flex;
     align-items: center;
-    /* or center for vertical centering */
     justify-content: center;
     width: 10em;
-    /* or whatever width fits your design */
     height: 10em;
-    /* match or slightly exceed your img height */
 }
 
 .section--icons>a>img {
@@ -134,7 +137,7 @@ footer {
     /* or .png */
     background-size: cover;
     /* or 'contain' if you want it to fit */
-    background-position: center bottom;
+    background-position: bottom;
     background-repeat: no-repeat;
     z-index: 0;
 }
@@ -580,7 +583,7 @@ footer {
     outline: none;
 }
 
-.states > select {
+.states>select {
     width: 23.2em;
 }
 
@@ -788,8 +791,8 @@ footer {
     text-align: center;
 }
 
-.contact-form > input,
-.contact-form > textarea {
+.contact-form>input,
+.contact-form>textarea {
     width: 100%;
     padding: 1.1em 1em;
     border: 0.1em solid var(--color-form);
@@ -845,3 +848,63 @@ footer {
 .shipping-policy section:last-of-type :last-child {
     margin-top: 2em;
 }
+
+/* -------------------- Search Pop Up ------------------- */
+.search-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    height: 90vh;
+    background: var(--color-primary);
+    box-shadow: -0.4em 0 1em rgba(0, 0, 0, 0.2);
+    transform: translateX(100%) translateY(5%);
+    transition: transform 0.4s cubic-bezier(.77, 0, .18, 1);
+    z-index: 1000;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-popup.active {
+    transform: translateX(-5%) translateY(5%);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em 1em 2em;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: var(--color-text-light);
+}
+
+.section--icons.search-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section--icons.search-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.section--icons.search-icons img {
+    object-fit: contain;
+    width: 6em;
+    height: 6em;
+}
+
+.section--icons.search-icons p {
+    margin-top: 0.5em;
+    text-align: center;
+}
+

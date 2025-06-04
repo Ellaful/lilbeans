@@ -29,7 +29,7 @@
 }
 
 :root {
-    font-size: 16px;
+    font-size: 20px;
     /* Body */
     --font-primary: 'Museo Slab', serif;
     /* Other uses */
@@ -53,9 +53,21 @@
 }
 
 
-@media (min-width: 60em) {
+@media (max-width: 60em) {
     :root {
-        font-size: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 40em) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 24.375em) {
+    :root {
+        font-size: 10px;
     }
 }
 

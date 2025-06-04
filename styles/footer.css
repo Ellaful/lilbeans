@@ -1,0 +1,122 @@
+@media (max-width: 50em) {
+    footer {
+        background-image: url('../assets/images/mobile-footer.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        margin-left: calc(50% - 50vw);
+        box-sizing: border-box;
+        padding: 0 1em 3em 1em;
+
+        min-height: 50em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .footer--content {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    .footer--brand {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer--brand .main-logo {
+        width: 25vw;
+        height: 25vh;
+    }
+
+    .footer--icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer--icons img {
+        width: 10vw;
+        height: 10vh;
+        margin: 0 0.5vw;
+        object-fit: contain;
+    }
+
+    .footer--support,
+    .footer--newsletter {
+        width: 50%;
+        margin: 0 0 0 35%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 24.375em) {
+    footer {
+        background-image: url('../assets/images/mobile-footer.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        margin-left: calc(50% - 50vw);
+        box-sizing: border-box;
+        padding: 2em 1em 0 1em;
+
+        min-height: 24.375em;
+        /* 390px in em, adjust as needed */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .footer--content {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    .footer--brand {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer--brand .main-logo {
+        width: 15vw;
+        height: 15vh;
+    }
+
+    .footer--icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer--icons img {
+        width: 10vw;
+        height: 10vh;
+        margin: 0 0.5vw;
+        object-fit: contain;
+    }
+
+    .footer--support,
+    .footer--newsletter {
+        width: 50%;
+        margin: 0 0 0 30%;
+        padding: 0;
+    }
+}

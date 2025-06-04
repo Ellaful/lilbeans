@@ -17,6 +17,10 @@
     --color-form: #8F7777;
     --color-form-active: #CE7B7B;
     --color-form-hover: #DD9997;
+
+    --color-gray: #E7E7E7;
+    --color-gray-light: #F2F2F2;
+    --color-gray-dark: #BFBFBF;
 }
 
 .header--middle a:hover,

@@ -32,15 +32,21 @@ if (document.querySelector('.cart--items')) {
             row.className = 'cart-row';
             row.innerHTML = `
             <td class="cart-product">
-                <a href="../products/${item.id}.html">
+                <a href="/products/${item.id}.html">
                     <img src="${item.image}" alt="${item.name}" class="cart-product-img">
                 </a>
-                <div class="cart-product-details">
-                    <h3 class="cart-product-desc">${item.name}</h3>
-                    <p class="cart-product-desc">$${item.price.toFixed(2)}</p>
+                <div class="cart-product-details desktop-only">
+                    <h3 class="cart-product-desc desktop-only">${item.name}</h3>
+                    <p class="cart-product-desc desktop-only">$${item.price.toFixed(2)}</p>
                 </div>
+                
             </td>
             <td>
+                <div class="cart-product-details mobile-only">
+                    <h3 class="cart-product-desc mobile-only">${item.name}</h3>
+                    <p class="cart-product-desc mobile-only">$${item.price.toFixed(2)}</p>
+                </div>
+
                 <div class="cart-qty-col">
                     <div class="quantity-controls">
                         <button class="qty-btn left" aria-label="Decrease quantity"><svg width="18" height="29"
@@ -65,12 +71,12 @@ if (document.querySelector('.cart--items')) {
                     </div>
                 </div>
             </td>
-            <td class="cart-total">$${(item.price * item.quantity).toFixed(2)}</td>
+            <td class="cart-total desktop-only">$${(item.price * item.quantity).toFixed(2)}</td>
         `;
             cartTable.appendChild(row);
         });
         checkoutTotal.textContent = `$${total.toFixed(2)}`;
-        if (cartIcon) cartIcon.classList.add('cart-has-item');;
+        if (cartIcon) cartIcon.classList.add('cart-has-item');
 
         // Add remove event listeners
         cartTable.querySelectorAll('.cart-remove').forEach(removeBtn => {

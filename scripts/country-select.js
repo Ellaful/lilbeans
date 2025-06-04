@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const countrySelect = document.querySelector('select[name="country"]');
     const stateSelect = document.querySelector('.states');
+    const shippingMethodText = document.querySelector('.shipping-method-text');
+
 
     function getState(country) {
         if (country === 'au') {
@@ -133,9 +135,24 @@ document.addEventListener('DOMContentLoaded', function () {
         return '';
     }
 
+    function getShipping(country) {
+        if (country === 'au') return 10;
+        if (country === 'us') return 2;
+        if (country === 'jp') return 5;
+        return null;
+    }
+
     countrySelect.addEventListener('change', function () {
         const country = countrySelect.value;
         stateSelect.innerHTML = getState(country);
+
+        // Update shipping method text
+        const shipping = getShipping(country);
+        if (shipping !== null) {
+            shippingMethodText.textContent = `Standard — $${shipping.toFixed(2)}`;
+        } else {
+            shippingMethodText.textContent = 'Enter your shipping address to view available shipping methods.';
+        }
     });
 
     // Optionally, clear on page load
