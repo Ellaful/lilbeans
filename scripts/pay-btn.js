@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         checkoutForm.addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent default form submission
             // Optionally, validate form here if needed
-            window.location.href = '/cart/confirmation.html';
+            window.location.href = '../cart/confirmation.html';
         });
     }
 });

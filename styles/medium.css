@@ -118,7 +118,7 @@
         left: 0;
         right: 0;
         bottom: -100%;
-        background-image: url(/assets/images/menu-popup.svg);
+        background-image: url('../assets/images/menu-popup.svg');
         background-size: cover;
         background-repeat: no-repeat;
         padding: 2em 1.5em 1.5em 1.5em;

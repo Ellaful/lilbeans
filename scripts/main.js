@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Load search popup HTML
-  fetch('/search-popup.html')
+  fetch('../search-popup.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('search-popup-container').innerHTML = html;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Load mobile menu HTML
-  fetch('/mobile-menu.html')
+  fetch('../mobile-menu.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('mobile-menu-container').innerHTML = html;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Load mobile search popup HTML
-  fetch('/mobile-search-popup.html')
+  fetch('../mobile-search-popup.html')
     .then(response => response.text())
     .then(html => {
       document.body.insertAdjacentHTML('beforeend', html);
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   // Load mobile menu HTML
-  fetch('/mobile-menu.html')
+  fetch('../mobile-menu.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('mobile-menu-container').innerHTML = html;

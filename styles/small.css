@@ -20,7 +20,7 @@
     /* ------------------- Header ------------------- */
 
     header {
-        background-image: url('/assets/images/mobile-header.png');
+        background-image: url('../assets/images/mobile-header.png');
         background-size: cover;
         height: 35vh;
         display: flex;
@@ -119,7 +119,7 @@
         left: 0;
         right: 0;
         bottom: -100%;
-        background-image: url(/assets/images/menu-popup.svg);
+        background-image: url('../assets/images/menu-popup.svg');
         padding: 2em 1.5em 1.5em 1.5em;
         z-index: 1000;
         transition: bottom 0.3s cubic-bezier(.4, 0, .2, 1);
