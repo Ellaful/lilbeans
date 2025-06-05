@@ -3,6 +3,21 @@ console.log('cart script loaded');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartIcon(cart.length > 0);
 
+document.addEventListener('DOMContentLoaded', function () {
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', function () {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                alert("Your cart is empty. Add items before checking out.");
+            } else {
+                window.location.href = '../cart/checkout.html';
+            }
+        });
+    }
+});
+
+
 if (document.querySelector('.cart--items')) {
     document.addEventListener('DOMContentLoaded', renderCart);
 

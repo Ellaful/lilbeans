@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (checkoutForm) {
         checkoutForm.addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent default form submission
-            // Optionally, validate form here if needed
+            
+            // Clear the cart
+            localStorage.removeItem('cart');
+
             window.location.href = '../cart/confirmation.html';
         });
     }
