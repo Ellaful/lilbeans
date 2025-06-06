@@ -47,7 +47,7 @@ if (document.querySelector('.cart--items')) {
             row.className = 'cart-row';
             row.innerHTML = `
             <td class="cart-product">
-                <a href="/products/${item.id}.html">
+                <a href="../products/${item.id}.html">
                     <img src="${item.image}" alt="${item.name}" class="cart-product-img">
                 </a>
                 <div class="cart-product-details desktop-only">
