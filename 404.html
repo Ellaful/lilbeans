@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Checkout - LilBeans</title>
-    <link rel="stylesheet" href="../styles/colors.css">
-    <link rel="stylesheet" href="../styles/typography.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+    <title>404 Error - LilBeans</title>
+    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/typography.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 
-    <link rel="stylesheet" href="../styles/medium.css" media="(min-width: 25em) and (max-width: 56.3em)">
-    <link rel="stylesheet" href="../styles/small.css" media="(max-width: 25em)">
+    <link rel="stylesheet" href="./styles/medium.css" media="(min-width: 25em) and (max-width: 56.3em)">
+    <link rel="stylesheet" href="./styles/small.css" media="(max-width: 25em)">
 
-    <script src="../scripts/main.js" defer></script>
-    <script src="../scripts/shipping-calc.js" defer></script>
-    <script src="../scripts/country-select.js" defer></script>
-    <script src="../scripts/pay-btn.js" defer></script>
-    <script src="../scripts/order-summary-toggle.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/add-to-cart.js" defer></script>
 
 </head>
 
@@ -186,97 +183,11 @@
         </div>
     </header>
 
-    <main class="checkout">
-        <div class="order-summary-collapsible mobile-only">
-            <button class="order-summary-toggle" aria-expanded="false" aria-controls="order-summary-content"
-                aria-label="order summary collapsible">
-                <span>Order Summary</span>
-                <div class="order-summary-total"></div>
-                <div class="order-summary-arrow">
-                    <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M17.0898 12.3737C17.6726 12.9428 18 13.7142 18 14.5185C18 15.3228 17.6726 16.0942 17.0898 16.6633L5.35414 28.1115C4.77028 28.6806 3.97849 29.0002 3.15298 29C2.74422 28.9999 2.33949 28.9213 1.96189 28.7687C1.58428 28.6161 1.24121 28.3924 0.952242 28.1105C0.663277 27.8286 0.434084 27.4939 0.277748 27.1256C0.121414 26.7573 0.0409987 26.3626 0.0410941 25.964C0.0411914 25.5654 0.121798 25.1707 0.278311 24.8025C0.434824 24.4342 0.664177 24.0997 0.953278 23.8179L10.4874 14.5185L0.951204 5.21911C0.653811 4.93927 0.416546 4.60448 0.253254 4.23426C0.0899623 3.86405 0.00391611 3.46583 0.000131967 3.06284C-0.00365218 2.65986 0.074902 2.26017 0.231213 1.8871C0.387526 1.51403 0.61846 1.17506 0.91055 0.889958C1.20264 0.604855 1.55003 0.379334 1.93245 0.226553C2.31487 0.073773 2.72466 -0.00320759 3.13792 0.000103605C3.55117 0.0034148 3.95962 0.0869472 4.33941 0.245835C4.71921 0.404721 5.06275 0.635777 5.35 0.925521L17.0939 12.3737L17.0898 12.3737Z"
-                            fill="currentColor" />
-                    </svg>
-                </div>
-            </button>
-            <div class="order-summary-content" id="order-summary-content" hidden>
-                <div class="summary-items"></div>
-                <div class="summary-shipping"></div>
-                <div class="summary-total"></div>
-            </div>
-        </div>
-
-
-        <section class="checkout--form">
-            <form action="">
-                <label for="email">Contact</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-
-                <label for="delivery">Delivery</label>
-                <select id="delivery" name="country">
-                    <option value="placeholder" disabled selected>Select Country</option>
-                    <option value="au">Australia</option>
-                    <option value="us">United States</option>
-                    <option value="jp">Japan</option>
-                </select>
-
-                <input type="text" name="fname" placeholder="First name" required>
-                <input type="text" name="lname" placeholder="Last name" required>
-
-                <input type="text" name="address" placeholder="Address" required>
-                <input type="text" name="city" placeholder="City" required>
-                <div class="states">
-
-                </div>
-                <input type="text" name="postcode" placeholder="Postcode" required>
-
-                <input type="text" name="phone" placeholder="Phone number" required>
-
-                <div class="form-offers">
-                    <input type="checkbox" name="offers" id="offers">
-                    <label for="offers">Text me with news and offers</label>
-                </div>
-                <div class="checkout--shipping">
-                    <h3>Shipping method</h3>
-                    <p class="shipping-method-text">Enter your shipping address to view available shipping methods.</p>
-                </div>
-
-                <div class="checkout--payment">
-                    <h2>Payment method</h2>
-                    <div class="payment--contents">
-                        <label for="card">Credit Card</label>
-
-                        <div class="payment--options">
-                            <input type="text" id="card" name="card" placeholder="Card number" required>
-                            <input type="text" id="expiry" name="expiry" placeholder="Expiration date (MM/YY)"
-                                maxlength="5" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" required>
-                            <input type="text" id="cvv" name="cvv" placeholder="Security code" required>
-                            <input type="text" id="name" name="name" placeholder="Name on card" required>
-
-                            <div class="billing-address">
-                                <input type="checkbox" name="billing" id="billing">
-                                <label for="billing">Use shipping address as billing address</label>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" class="pay-btn" value="Pay Now">
-                </div>
-            </form>
-
-        </section>
-
-        <aside class="checkout--summary">
-            <div class="summary-items"></div>
-            <div class="discount-code">
-                <input type="text" id="discount" name="discount" placeholder="Discount code or gift card">
-                <button type="button" class="apply-discount-btn">Apply</button>
-            </div>
-            <div class="summary-shipping"></div>
-            <div class="summary-total"></div>
-        </aside>
+    <main class="error-content">
+       <h1>404</h1>
+       <p>Oops! The page you're looking for doesn't exist.</p>
+       <a href="./index.html" class="cont-btn ">Go back to homepage</a>
     </main>
-
 
     <footer>
         <div class="footer--content">

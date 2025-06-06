@@ -134,9 +134,7 @@ footer {
     padding: 5em;
     position: relative;
     background-image: url('../assets/images/website-footer.svg');
-    /* or .png */
     background-size: cover;
-    /* or 'contain' if you want it to fit */
     background-position: bottom;
     background-repeat: no-repeat;
     z-index: 0;
@@ -147,7 +145,6 @@ footer {
     flex-direction: row;
     align-items: flex-start;
     max-width: 87.5em;
-    /* responsive max-width */
     margin: 0 auto;
     padding: 6em 0 0;
     gap: 3em;
@@ -188,7 +185,6 @@ footer {
 .footer--form input[type="email"]::placeholder {
     color: var(--color-primary-dark);
     opacity: 1;
-    /* ensures the color is not faded */
 }
 
 .footer--form button {
@@ -205,7 +201,6 @@ footer {
 
 .footer--form input[type="email"]:focus {
     outline: none;
-    /* optional: removes default blue outline */
     border-color: var(--color-primary);
     opacity: 0.9;
 }
@@ -773,7 +768,7 @@ footer {
 .cont-btn {
     display: inline-block;
     background: var(--color-secondary);
-    color: #fff;
+    color: var(--color-text-white);
     padding: 0.5em 2em;
     margin-top: 2em;
     border: none;
@@ -908,3 +903,7 @@ footer {
     text-align: center;
 }
 
+/* -------------------- Error ------------------- */
+.error-content {
+    text-align: center;
+}
